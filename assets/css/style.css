@@ -244,6 +244,7 @@ button,
 
 /* ---Additional Font Family--- */
 .freestyle-script {
+  color: white;
   font-family: "Freestyle Script" !important;
   font-size: 72px !important;
 }
@@ -6136,14 +6137,14 @@ i, .tab-content .tab-pane.active, .scroll-to-top i, .quantity .cart-plus-minus >
 /* ---Home Two--- */
 .bg-2,
 .bg-3 {
-  background-image: url("../images/slider/bg/2-1.jpg");
+  background-image: url("../images/idex-1.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   min-height: 750px;
 }
 
-@media (max-width: 1919px) {
+@media (max-width: 1024px) {
   .bg-2,
   .bg-3 {
     min-height: 580px;
@@ -7572,7 +7573,7 @@ i, .tab-content .tab-pane.active, .scroll-to-top i, .quantity .cart-plus-minus >
 /*  20 - Components - Breadcrumb
 /*----------------------------------------*/
 .breadcrumb-area {
-  background-image: url("../images/breadcrumb/1.jpg");
+  background-image: url("../images/Imagen_Trabajo.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -8790,11 +8791,11 @@ i, .tab-content .tab-pane.active, .scroll-to-top i, .quantity .cart-plus-minus >
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  width: 100%;
-  left: 0;
+  width: 100%; 
+  left: 50px;
   right: auto;
   top: 100%;
-  z-index: 999;
+  z-index: 99;
 }
 
 .main-nav > ul > li.megamenu-holder .quicky-megamenu_wrap .quicky-megamenu {
