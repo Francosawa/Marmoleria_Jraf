@@ -11,18 +11,19 @@
 
     //Declaración de variables para almacenar los datos ingresados por el usuario en cada input del formulario. Recordar que se accede por el "name" del input.
 
-    $nombre = $_POST['nombre'];
-    $email = $_POST['mail'];
-    $comentario = $_POST['comentario'];
+    $nombre = $_POST['introducir_nombre'];
+    $email = $_POST['introducir_mail'];
+    $comentario = $_POST['introducir_mensaje'];
+    $asunto = $_POST['introducir_asunto'];
 
 try {
     //Configuración del servidor
-    $mail->SMTPDebug = 0 //SMTP::DEBUG_SERVER;    //Se habilita la depuración, si se utiliza un servidor local colocar en 0
+    $mail->SMTPDebug = 0; //SMTP::DEBUG_SERVER;    //Se habilita la depuración, si se utiliza un servidor local colocar en 0
     $mail->isSMTP();   //Se utiliza el protocolo SMTP
     $mail->Host       = 'smtp.gmail.com';  //Colocar aquí el servidor de correo a utilizar, en el ejemplo smtp de gmail
     $mail->SMTPAuth   = true;     //Se habilita la autenticación smtp
     $mail->Username   = 'jraf.amoblamientos@outlook.com'; //Colocar aquí una dirección de correo valida, debe pertenecer al servidor indicado arriba
-    $mail->Password   = 'Soydel1971' //Colocar aquí la contraseña
+    $mail->Password   = 'depto764'; //Colocar aquí la contraseña
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Habilita el cifrado TLS; se recomienda `PHPMailer::ENCRYPTION_SMTPS` 
     $mail->Port       = 587;                                    //Número del puerto utilizado
 
@@ -40,14 +41,14 @@ try {
 
     //Contenido
     $mail->isHTML(true);                     //Si se envía con formato HTML
-    $mail->Subject = 'Contacto desde la WEB';  //Asunto del mensaje
+    $mail->Subject = $asunto;  //Asunto del mensaje
 
     //Sobre esta variable $mail armamos el cuerpo del mensaje los puntos son para concatenar, es lo mismo que con el + en C#.
-    $mail->Body    = 'colocar_nombre ' . $nombre . '<br> colocar_email: ' . $email . '<br> colocar_mensaje: '. $comentario;
+    $mail->Body    = 'Nombre: ' . $nombre . '<br> Email: ' . $email . '<br> Mensaje: '. $comentario;
  
 
     $mail->send(); //Se envía el mail
-    header(location:index.html);
+    // header(location:index.html);
     echo "Gracias por contactarnos, responderemos a la brevedad"; //Fin del try
 } catch (Exception $e) {
     echo "Error, el mensaje no se envió: {$mail->ErrorInfo}"; //Si hay algún error
