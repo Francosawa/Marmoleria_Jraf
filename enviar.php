@@ -18,7 +18,7 @@
 
 try {
     //Configuración del servidor
-    $mail->SMTPDebug = 0; //SMTP::DEBUG_SERVER;    //Se habilita la depuración, si se utiliza un servidor local colocar en 0
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER; //SMTP::DEBUG_SERVER;    //Se habilita la depuración, si se utiliza un servidor local colocar en 0
     $mail->isSMTP();   //Se utiliza el protocolo SMTP
     $mail->Host       = 'smtp.gmail.com';  //Colocar aquí el servidor de correo a utilizar, en el ejemplo smtp de gmail
     $mail->SMTPAuth   = true;     //Se habilita la autenticación smtp
