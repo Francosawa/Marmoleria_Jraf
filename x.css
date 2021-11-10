@@ -219,10 +219,10 @@
 
   .next{
     display: block;
-    background: black;
-    height: 30px;
-    width: 30px;
-    line-height: 30px;
+    background:none;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
     text-decoration: none;
     text-align: center;
   } 

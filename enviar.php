@@ -22,14 +22,14 @@ try {
     $mail->isSMTP();   //Se utiliza el protocolo SMTP
     $mail->Host       = 'smtp.gmail.com';  //Colocar aquí el servidor de correo a utilizar, en el ejemplo smtp de gmail
     $mail->SMTPAuth   = true;     //Se habilita la autenticación smtp
-    $mail->Username   = 'jraf.amoblamientos@outlook.com'; //Colocar aquí una dirección de correo valida, debe pertenecer al servidor indicado arriba
+    $mail->Username   = 'Jraf.amoblamientos@gmail.com'; //Colocar aquí una dirección de correo valida, debe pertenecer al servidor indicado arriba
     $mail->Password   = 'depto764'; //Colocar aquí la contraseña
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Habilita el cifrado TLS; se recomienda `PHPMailer::ENCRYPTION_SMTPS` 
     $mail->Port       = 587;                                    //Número del puerto utilizado
 
  
     $mail->setFrom('colocar_email', 'Nombre_usuario'); //Desde donde se envía el mail, el nombre es opcional
-    $mail->addAddress('usuario@gmail.com', 'Nombre_usuario');     //A quién se le envía el mail, el nombre es opcional
+    $mail->addAddress('Jraf.amoblamientos@gmail.com', 'Nombre_usuario');     //A quién se le envía el mail, el nombre es opcional
     //$mail->addAddress('ellen@example.com');  //información opcional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
